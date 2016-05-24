@@ -1,0 +1,66 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    // for VideoPresenterExoPlayer
+//    exoplayerVersion = 'r1.5.7'
+//    exoplayer = "com.google.android.exoplayer:exoplayer:$exoplayerVersion"
+
+    butterknifeVersion = '8.0.1'
+    butterknife = "com.jakewharton:butterknife:$project.butterknifeVersion"
+    butterknifeCompiler = "com.jakewharton:butterknife-compiler:$project.butterknifeVersion"
+
+    daggerVersion = '2.1'
+    dagger = "com.google.dagger:dagger:$project.daggerVersion"
+    daggerCompiler = "com.google.dagger:dagger-compiler:$project.daggerVersion"
+
+    moshi = 'com.squareup.moshi:moshi:1.1.0'
+
+    okhttpVersion = "3.2.0"
+    okhttp = "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    okio = 'com.squareup.okio:okio:1.6.0'
+
+    picasso = 'com.squareup.picasso:picasso:2.5.2'
+    picassoOkHttp3Downloader = 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2'
+
+    pcollections = 'org.pcollections:pcollections:2.1.2'
+
+    retrofitVersion = '2.0.0'
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    retrofitAdapterRxjava = "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    retrofitConverterMoshi = "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+
+    rxandroid = 'io.reactivex:rxandroid:1.2.0'
+    rxjava = 'io.reactivex:rxjava:1.1.4'
+
+    supportLibraryVersion = '23.3.0'
+    supportAppCompat = "com.android.support:appcompat-v7:$supportLibraryVersion"
+    supportRecyclerView = "com.android.support:recyclerview-v7:$supportLibraryVersion"
+
+    timber = 'com.jakewharton.timber:timber:4.1.1'
+
+    threetenabp = 'com.jakewharton.threetenabp:threetenabp:1.0.3'
+}
